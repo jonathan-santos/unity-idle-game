@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65940582433364280}
   - component: {fileID: 114812835720355878}
   m_Layer: 0
-  m_Name: Fabrica3
+  m_Name: Factory3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed5a53045256694e8fb2e892f58be3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 3000
-  passiveGain: 500
+  price: 200
+  passiveGain: 20
