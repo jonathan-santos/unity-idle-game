@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CameraViewTexture : MonoBehaviour
 {
-    void Start()
+    IEnumerator Start()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
         WebCamDevice camera = new WebCamDevice();
@@ -23,7 +24,7 @@ public class CameraViewTexture : MonoBehaviour
         }
 
         var rawImage = GetComponent<RawImage>();
-        //yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
+        yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
         WebCamTexture webcamTexture = new WebCamTexture(camera.name);
         rawImage.texture = webcamTexture;
         rawImage.material.mainTexture = webcamTexture;
