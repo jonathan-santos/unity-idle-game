@@ -11,8 +11,9 @@ public class ShopButtonAction : MonoBehaviour
     public GameObject factoriesArea;
     int price;
     int passiveGain;
+    float posicaoFabrica;
 
-	void Start ()
+    void Start()
     {
         button = GetComponent<Button>();
         text = GetComponentInChildren<Text>();
@@ -35,7 +36,9 @@ public class ShopButtonAction : MonoBehaviour
             price = Convert.ToInt32(Math.Abs(price * 1.50));
             text.text = factory.name + "\n" + price;
 
-            Instantiate(factory, factoriesArea.transform);
+            var novaFabrica = Instantiate(factory, factoriesArea.transform);
+            novaFabrica.transform.Translate(new Vector3(posicaoFabrica, -posicaoFabrica, 0));
+            posicaoFabrica -= 1.5f;
         }
     }
 }
