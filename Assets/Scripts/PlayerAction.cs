@@ -23,4 +23,4 @@ public class PlayerAction : MonoBehaviour
             scoreText.text += "\nPassive gain: " + passiveScoreGain + "/s";
         }
     }
-}
+} 
