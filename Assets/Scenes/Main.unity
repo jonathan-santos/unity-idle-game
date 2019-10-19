@@ -372,6 +372,8 @@ MonoBehaviour:
   scoreText: {fileID: 207896471}
   score: 0
   passiveScoreGain: 0
+  bullet: {fileID: 3621595975973320037, guid: a8b6e2de8b85f5446930b3f81edcef96, type: 3}
+  bulletVelocity: 50
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
