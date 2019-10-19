@@ -9,4 +9,17 @@ public class ClickObjectAction : MonoBehaviour
     {
         player.score += scorePointsOnClick;
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            player.score -= 10;
+            if (player.score < 0)
+            {
+                player.score = 0;
+            }
+            Destroy(collision.gameObject);
+        }
+    }
 }

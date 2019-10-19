@@ -48,6 +48,8 @@ public class PlayerAction : MonoBehaviour
         {
             var newBullet = Instantiate(bullet);
             var newBulletRB = newBullet.GetComponent<Rigidbody>();
+            var newBulletAction = newBullet.GetComponent<BulletAction>();
+            newBulletAction.player = this;
             newBullet.transform.position = this.transform.position;
             newBulletRB.velocity = camera.transform.rotation * Vector3.forward * bulletVelocity;
             Destroy(newBullet, 2);
