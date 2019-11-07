@@ -26,6 +26,15 @@ public class ShopButtonAction : MonoBehaviour
         text.text = factory.name + "\n" + factoryAction.price;
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "bullet")
+        {
+            BuyFactory();
+            Destroy(collision.gameObject);
+        }
+    }
+
     void BuyFactory()
     {
         if (player.score >= price)
